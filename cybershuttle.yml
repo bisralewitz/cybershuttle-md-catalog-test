@@ -1,1 +1,41 @@
-#test 1
+project:
+  name: "Cybeshuttle MD Catalog test"
+  description: "A test of Cybershuttle MD Catalog"
+  homepage: https://github.com/bisralewitz/cybershuttle-md-catalog-test.git 
+  authors:
+    - isralewi@illinois.edu
+  tags:
+    - cybershuttle
+    - md
+    - namd
+    - illinois
+    - uiuc
+    - molecular-dynamics
+    - airavata-courses
+
+workspace:
+  location: /workspace
+  resources:
+    min_cpu: 4
+    min_gpu: 0
+    min_mem: 4096
+    gpu_mem: 0    
+
+  model_collection:
+    - source: cybershuttle
+      identifier: cybershuttle-reference
+      mount_point: /cybershuttle_data/cybershuttle-reference
+  data_collection: []
+
+additional_dependencies:
+  conda:
+    - python=3.10
+    - pip
+  pip:
+    #- transformersdd
+    # - torch
+    # - sentencepiece
+    - scikit-learn
+    # - accelerate
+    # - VaderSentiment
+    # - gradio
